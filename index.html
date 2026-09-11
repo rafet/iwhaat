@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IWHAAT: I would have asked AI too</title>
+<meta name="description" content="You asked me something I don't know. I'd have asked AI anyway, so skip the middleman and ask it yourself.">
+<meta property="og:title" content="IWHAAT: I would have asked AI too">
+<meta property="og:description" content="I'd have asked AI anyway. Skip the middleman, ask it yourself, and come back if you get stuck.">
+<meta property="og:url" content="https://iwha.at/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231a1a1a'/%3E%3Ccircle cx='16' cy='8.5' r='3' fill='%23fff'/%3E%3Crect x='13' y='13' width='6' height='10' rx='1' fill='%23fff'/%3E%3Crect x='8' y='25.5' width='16' height='2.5' rx='1.25' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --muted: #6b6b6b;
+    --link: #1a4fd6;
+    --rule: #e2e2e2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #161616; --text: #e8e8e8; --muted: #9a9a9a; --link: #8fb0ff; --rule: #2e2e2e; }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 1.125rem/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  ::selection { background: var(--link); color: var(--bg); }
+  main { max-width: 36rem; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
+  .home { color: var(--text); font-weight: 600; text-decoration: none; }
+
+  /* Headline: starts as the acronym, then unfolds into the sentence */
+  h1 {
+    margin: 3.5rem 0 0.5rem;
+    font-size: clamp(2rem, 7vw, 3rem);
+    line-height: 1.15;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+  h1 .w { white-space: nowrap; }
+  h1 b { font-weight: 700; text-decoration: underline; text-decoration-thickness: 0.08em; text-underline-offset: 0.12em; }
+  h1 .r {
+    display: inline-block;
+    vertical-align: bottom;
+    overflow: hidden;
+    max-width: 0;
+    opacity: 0;
+    animation: unfold 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+    animation-delay: calc(0.7s + var(--i) * 70ms);
+  }
+  @keyframes unfold { to { max-width: 6ch; opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) {
+    h1 .r { animation: none; max-width: none; opacity: 1; }
+  }
+
+  .aka { margin: 0 0 3rem; color: var(--muted); }
+  p { margin: 0 0 1.25rem; }
+  ol { margin: 0 0 1.25rem; padding-left: 1.4rem; }
+  li { margin-bottom: 0.35rem; }
+  li::marker { color: var(--muted); }
+  .ask { font-size: 1.5rem; line-height: 1.3; margin: 2rem 0; }
+  a { color: var(--link); text-underline-offset: 0.15em; }
+  a:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; border-radius: 2px; }
+  footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 1rem; }
+  footer p { margin: 0; }
+  .copy { font-weight: 600; }
+</style>
+</head>
+<body>
+<main>
+  <a class="home" href="/">iwha.at</a>
+
+  <h1>
+    <span class="w"><b>I</b></span>
+    <span class="w"><b>w</b><span class="r" style="--i:0">ould</span></span>
+    <span class="w"><b>h</b><span class="r" style="--i:1">ave</span></span>
+    <span class="w"><b>a</b><span class="r" style="--i:2">sked</span></span>
+    <span class="w"><b>A</b><span class="r" style="--i:3">I</span></span>
+    <span class="w"><b>t</b><span class="r" style="--i:4">oo.</span></span>
+  </h1>
+  <p class="aka">IWHAAT, for short.</p>
+
+  <p>You asked me something I don't know. If I tried to answer anyway, I'd open an AI chat, paste in your question, and read you back whatever it said.</p>
+
+  <p>That makes me a <a href="https://gruhn.me/blog/2026-08-03/">meat-proxy</a>, and a slow one. You'd be waiting on me. I'd be missing the context that's in your head. And the answer would reach you filtered through someone who understands the question no better than you do.</p>
+
+  <p class="ask">So skip me. Ask it yourself.</p>
+
+  <p>Then do the part AI can't do for you:</p>
+  <ol>
+    <li>Read the answer properly, not just the first line.</li>
+    <li>Check it against what you already know.</li>
+    <li>Try it, if it's something you can try.</li>
+  </ol>
+
+  <p>If you're still stuck after that, come back. "I asked, it said X, but Y doesn't add up" is a question I can actually help with. That's where a human is worth something.</p>
+
+  <p>This isn't a brush-off. It's the fastest way to your answer.</p>
+
+  <footer>
+    <p>Got a question you'd have to ask AI anyway? Reply with <a class="copy" href="https://iwha.at/" title="Copy link">iwha.at</a>.</p>
+  </footer>
+</main>
+<script>
+  const copy = document.querySelector('.copy');
+  if (navigator.clipboard) {
+    copy.addEventListener('click', async (e) => {
+      e.preventDefault();
+      try {
+        await navigator.clipboard.writeText('https://iwha.at');
+        copy.textContent = 'copied';
+        setTimeout(() => { copy.textContent = 'iwha.at'; }, 1500);
+      } catch { location.href = copy.href; }
+    });
+  }
+</script>
+</body>
+</html>
